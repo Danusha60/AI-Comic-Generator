@@ -14,7 +14,7 @@ function App() {
 
   const [loading, setLoading] = useState(false);
   const [generatingImages, setGeneratingImages] = useState(false);
-
+const [error, setError] = useState("");
   const comicRef = useRef(null);
 
   // ======================================
@@ -22,10 +22,15 @@ function App() {
   // ======================================
 
   const handleGenerate = async () => {
-    if (story.trim() === "") {
-      alert("Please enter your story!");
-      return;
-    }
+   if (!story.trim()) {
+  alert("Please enter a story first!");
+  return;
+}
+
+if (story.trim().length < 20) {
+  alert("Please enter a story with at least 20 characters.");
+  return;
+}
 
     setLoading(true);
     setShowPreview(false);
