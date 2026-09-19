@@ -78,6 +78,4 @@ Open the local URL displayed in the terminal.
 - Drag-and-drop panel arrangement.
 - User accounts and project saving.
 
-## 👩‍💻 Developed By
 
-**Danusha Tentu**
